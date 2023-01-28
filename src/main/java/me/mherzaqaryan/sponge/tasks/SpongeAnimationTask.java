@@ -25,7 +25,7 @@ public class SpongeAnimationTask extends BukkitRunnable {
 
     @Override
     public void run() {
-        if (radius > 4) {
+        if (radius > 2) {
             cancel();
             block.setType(Material.AIR);
             loc.getWorld().playSound(loc, Sound.valueOf(Sponge.getSplash()), 1, 1);

@@ -28,7 +28,8 @@ public class Sponge extends JavaPlugin {
         if (!setupBedwars()) return;
         if (!setupParticle()) return;
         bedWars = Bukkit.getServicesManager().getRegistration(BedWars.class).getProvider();
-        new Metrics(this, 11788);
+
+        //new Metrics(this, 11788);
         Bukkit.getPluginManager().registerEvents(new SpongePlaceListener(), this);
         splash = bedWars.getForCurrentVersion("SPLASH", "ENTITY_PLAYER_SPLASH", "ENTITY_PLAYER_SPLASH");
         woodClick = bedWars.getForCurrentVersion("WOOD_CLICK", "BLOCK_WOOD_BUTTON_CLICK_ON", "BLOCK_WOODEN_BUTTON_CLICK_ON");

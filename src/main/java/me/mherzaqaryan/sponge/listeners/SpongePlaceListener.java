@@ -14,7 +14,7 @@ public class SpongePlaceListener implements Listener {
         if (e.isCancelled()) return;
         if (!Sponge.getBedWars().getArenaUtil().isPlaying(e.getPlayer())) return;
         if (!e.getBlock().getType().equals(Material.SPONGE)) return;
-        new SpongeAnimationTask(e.getBlock()).runTaskTimer(Sponge.getInstance(), 0L, 8L);
+        new SpongeAnimationTask(e.getBlock()).runTaskTimerAsynchronously(Sponge.getInstance(), 0L, 20L);
     }
 
 }
